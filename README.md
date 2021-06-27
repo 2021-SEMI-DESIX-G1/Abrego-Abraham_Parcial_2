@@ -1,2 +1,2 @@
-# Abrego-Abraham_Parcial_2
-Parcial 2
+# module_pattern_example
+Ejemplo de patrón basado en módulos
