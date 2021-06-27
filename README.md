@@ -1,3 +1,4 @@
 # module_pattern_example
 Ejemplo de patrón basado en módulos
-![image](https://user-images.githubusercontent.com/54871913/123560438-b7c9ef80-d767-11eb-88e6-00b262f98ed9.png)
+![image](https://user-images.githubusercontent.com/54871913/123560453-d334fa80-d767-11eb-8d45-9124f359e4e1.png)
+
