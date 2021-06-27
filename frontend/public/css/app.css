@@ -1,0 +1,288 @@
+
+h1 {
+    font-family: 'Century Gothic', CenturyGothic;
+    /* font-weight: 300; */
+    padding: 0 2rem;
+    margin: 0;
+    font-size: xx-large;
+}
+
+body{
+    background-color: lightblue;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    
+}
+.main-form {
+    width: 50%;
+    background-color: white;
+    align-self: center;
+    display: block;
+    margin: 120px auto;
+    box-shadow: 5px 10px 20px black;
+}
+
+#task-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    background-color: teal;
+    color: wheat;
+    text-align: center;
+}
+
+.name{
+    font-family: 'Century Gothic', CenturyGothic;
+    font-size: x-large;
+}
+.type{
+    font-family: 'Century Gothic', CenturyGothic;
+    font-size: small;
+    display: flex;
+    text-align: right;
+    color: rgb(105, 105, 105);
+    padding: 0.3rem 0.3rem;
+    /* box-sizing: border-box; */
+    width: fit-content;
+}
+
+.inputAlert{
+    -webkit-animation: tiembla 1s, colorP 5s  ;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    cursor: pointer;
+}
+
+@-webkit-keyframes tiembla{
+    0%  { -webkit-transform:rotateZ(0deg); }
+    25% { -webkit-transform:rotateZ( -5deg) ; }
+    50% { -webkit-transform:rotateZ( 0deg) ; }
+    75%{ -webkit-transform:rotateZ( 5deg); }
+    100%{ -webkit-transform:rotateZ( 0deg); }
+  }
+
+  @-webkit-keyframes colorP{
+    0%  { background-color: rgb(255, 0, 0); }
+    25% { background-color: rgb(255, 130, 130); }
+    50% { background-color: rgb(255, 255, 255); }
+    75% { background-color: rgb(255, 131, 131); }
+    100%{ background-color: red; }
+
+  }
+
+form input {
+    height: 2rem;
+    width: 70%;
+    font-family: 'Century Gothic', CenturyGothic;
+    font-size: 20px;
+    font-weight: 300;
+    padding-left: 1rem;
+    margin-right: 2%;
+    border: none;
+    padding-bottom: 0.7%;
+    color: gray;
+
+}
+form button {
+    font-family: 'Century Gothic', CenturyGothic;
+    font-size: 1rem;
+    font-weight: 300;
+    height: 2.4rem;
+    width: 6rem;
+    background-color: #3262c8;
+    border-color: #5a879e;
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+    border: none;
+    margin-left: 2%;
+}
+form button:hover{
+    background-color: #00e1ff;
+    border-color: #76e6fa;
+    color: #434747;
+    transition: 0.5s;
+}
+select{
+    font-family: 'Century Gothic', CenturyGothic;
+    font-size: 1rem;
+    font-weight: 300;
+    height: 2.4rem;
+    width: 10rem;
+    border: none;
+    color: gray;
+    
+    
+}
+.main-tittle{
+    background-color: teal;
+    color: rgb(253, 253, 253);
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.header{
+    background-color: teal;
+    padding: 20px 20px;
+    color: wheat;
+    text-align: center;
+}
+
+.edit{
+    position: absolute;
+    border: none;
+    background-image: url("../img/edit.png");
+    background-size: cover;
+    background-color: whitesmoke;
+    right: 4px;
+    top: 25%;
+    margin-right: 41px;
+    padding:12px 16px 20px 16px;
+    transition: 0.5s;
+}
+
+.edit:enabled{
+    background-color: whitesmoke;
+}
+
+.edit:hover{
+    background-color: rgb(108, 172, 214);
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.edit:disabled{
+    cursor:not-allowed;
+}
+
+
+.close{
+    position: absolute;
+    
+    border: none;
+    background-image: url("../img/delete.png");
+    background-size: cover;
+    background-color: whitesmoke;
+    right: 4px;
+    top: 25%;
+    padding:12px 16px 20px 16px;
+    transition: 0.5s;
+}
+
+.close:hover{
+    background-color: orangered;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.close:disabled{
+    cursor:not-allowed;
+}
+
+ul{
+    margin: 0;
+    border-left: 6px solid teal;
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li{
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: whitesmoke;
+    font-size: 18px;
+    transition: 0.5s;
+    user-select: none;
+}
+
+
+
+ul li:hover{
+    background-color: #ddd;
+}
+
+
+ul li:hover .close:disabled{
+    background-color: #888;
+}
+
+ul li:hover .edit{
+    background-color: #ddd;
+}
+
+ul li:hover .edit:hover{
+    background-color: rgb(109, 177, 223);
+}
+
+ul li.checked{
+    background: #888;
+    color:white;
+    text-decoration: line-through;
+}
+
+ul li.checked .edit, .close{
+background-color: #888;
+}
+
+
+
+ul li.checked:hover{
+    background: rgb(179, 179, 179);
+    color:white;
+    text-decoration: line-through;
+}
+
+ul li.checked:hover .edit{
+    background-color: rgb(179, 179, 179);
+}
+
+ul li.checked:hover .edit:hover{
+    background-color: rgb(179, 179, 179);
+    cursor: not-allowed;
+}
+
+ul li.checked:hover .close{
+    cursor: pointer;
+    background-color:  #888;
+}
+
+ul li.checked:hover .close:hover{
+    cursor: pointer;
+    background-color:orangered;
+}
+
+ul li.checked .close:disabled{
+    cursor:not-allowed;
+    background-color:  #888;
+}
+
+ul li.checked:hover .close:disabled{
+    cursor:not-allowed;
+    background-color:  #888;
+}
+
+ul li.checked::before{
+    content: "";
+    position: absolute;
+    border-color: whitesmoke;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top:10px;
+    left:16px;
+    transform: rotate(45deg);
+    height: 15px;
+}
+
+.doTask{
+    display: none;
+}
